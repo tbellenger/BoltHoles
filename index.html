@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolt Hole Calculator</title>
+    <link rel="stylesheet" type="text/css" src="./assets/style.css">
 </head>
 <body>
     <div class="centered">
@@ -24,10 +25,16 @@
           <button class="btn" id="graph">Calculate</button> 
         </div>
       </div>
-      <div>
-          <canvas id="myChart" height="500" width="500"></canvas>
-      </div>
       
+      <div>
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+      </svg>
+    </div>
+    <div>
+      <canvas id="myChart" height="500" width="500"></canvas>
+  </div>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
   
