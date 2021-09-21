@@ -3,12 +3,11 @@ let h = 4;
 let s = 0;
 let tick = 0;
 // get the canvas
-let c = document.getElementById("myChart");
-let ctx = c.getContext("2d");
+
 var svg = d3.select("svg");
 // calculate extents and midpoint
-let canvY = c.height;
-let canvX = c.width;
+let canvY = 500;
+let canvX = 500;
 let canvMidX = canvX / 2;
 let canvMidY = canvY / 2;
 
@@ -51,28 +50,21 @@ function holes(radius, numHoles, startAngle) {
 function draw(d) {
     // draw x axis in svg
     svg.append("line")
-    .attr("class", "x-axis")
+    .attr("class", "axis")
     .attr("x1", canvMidX)
     .attr("y1", 0)
     .attr("x2", canvMidX)
-    .attr("y2", canvY)
-    .attr("stroke", "black")
-    .attr("stroke-width", 1);
+    .attr("y2", canvY);
     // draw y axis in svg
     svg.append("line")
-    .attr("class", "y-axis")
+    .attr("class", "axis")
     .attr("x1", 0)
     .attr("y1", canvMidY)
     .attr("x2", canvX)
-    .attr("y2", canvMidY)
-    .attr("stroke", "black")
-    .attr("stroke-width", 1);
+    .attr("y2", canvMidY);
 
     // calculate tick size according to canvas size
     tick = Math.min(canvX, canvY) / ((2 * r) + 1);
-
-    // draw holes and point text
-    d.forEach(drawPoint);
 
     // draw bolt hole circle in svg
     svg.append("circle")
@@ -80,8 +72,10 @@ function draw(d) {
     .attr("cx", canvMidX)
     .attr("cy", canvMidY)
     .attr("r", tick * r)
-    .attr("fill", "none")
-    .attr("stroke", "black");
+    .attr("fill", "none");
+
+    // draw holes and point text
+    d.forEach(drawPoint);
 
     // draw the ticks on the axes
     drawTicks(r, tick, tick);
@@ -97,8 +91,7 @@ function drawPoint(item, index) {
     .attr("cx", circX)
     .attr("cy", circY)
     .attr("r", 5)
-    .attr("fill", "none")
-    .attr("stroke", "black");
+    .attr("fill", "none");
     svg.append("text")
     .attr("class", "hole-text")
     .attr("x", circX - 40)
@@ -124,34 +117,26 @@ function drawTicks(rad, tx, ty) {
         .attr("x1", canvMidX + counter * tx)
         .attr("y1", canvMidY - tkSz)
         .attr("x2", canvMidX + counter * tx)
-        .attr("y2", canvMidY + tkSz)
-        .attr("stroke", "black")
-        .attr("stroke-width", 1);
+        .attr("y2", canvMidY + tkSz);
         svg.append("line")
         .attr("class", "tick")
         .attr("x1", canvMidX - counter * tx)
         .attr("y1", canvMidY - tkSz)
         .attr("x2", canvMidX - counter * tx)
-        .attr("y2", canvMidY + tkSz)
-        .attr("stroke", "black")
-        .attr("stroke-width", 1);
+        .attr("y2", canvMidY + tkSz);
         // to the left and right of the y axis on both negative and positive sides
         svg.append("line")
         .attr("class", "tick")
         .attr("x1", canvMidX - tkSz)
         .attr("y1", canvMidY + counter * ty)
         .attr("x2", canvMidX + tkSz)
-        .attr("y2", canvMidY + counter * ty)
-        .attr("stroke", "black")
-        .attr("stroke-width", 1);
+        .attr("y2", canvMidY + counter * ty);
         svg.append("line")
         .attr("class", "tick")
         .attr("x1", canvMidX - tkSz)
         .attr("y1", canvMidY - counter * ty)
         .attr("x2", canvMidX + tkSz)
-        .attr("y2", canvMidY - counter * ty)
-        .attr("stroke", "black")
-        .attr("stroke-width", 1);
+        .attr("y2", canvMidY - counter * ty);
         // work in .5 increments for the ticks
         counter = counter + 0.5;
 
