@@ -11,23 +11,23 @@
     />
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
   </head>
-  <body>
-    <h1>Bolt Hole Calculator</h1>
-    <div class="content-bx">
-      <label for="Radius">Radius</label>
-      <input type="number" id="r" name="r" value="3" />
+  <body class="std highlight">
+    <h1 class="std highlight">Bolt Hole Calculator</h1>
+    <div class="std content-bx highlight">
+      <label class="highlight" for="Radius">Radius</label>
+      <input class="highlight border" type="number" id="r" name="r" value="3" />
       <label for="Start Angle">Start Angle</label>
-      <input type="number" step="5" min="0" max="360" id="s" name="s" value="45" />
+      <input class="border" type="number" step="5" min="0" max="360" id="s" name="s" value="45" />
       <label for="Number of holes">Number of Holes</label>
-      <input type="number" min="3" max="40" id="h" name="h" value="4" />
-      <button class="btn" id="graph">Calculate</button>
+      <input class="border" type="number" min="3" max="40" id="h" name="h" value="4" />
+      <button class="std highlight border" id="graph">Calculate</button>
     </div>
 
-    <div class="content-bx">
-      <svg
+    <div class="std content-bx highlight">
+      <svg 
         id="svg"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 500 500"
+        viewBox="0 0 300 300"
       ></svg>
     </div>
     <script src="https://d3js.org/d3.v4.min.js"></script>

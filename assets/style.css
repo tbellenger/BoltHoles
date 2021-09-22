@@ -1,85 +1,87 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: black;
-    stroke: hotpink;
-    color:hotpink;
-    font-family: "Audiowide", sans-serif;
-    display: flex;
-    flex-direction:column;
-    flex-wrap: wrap;
+.highlight {
+  --highlight-clr: blue;
+  --accent-clr: hsla(330, 100%, 71%, 0.699);
+}
 
-  }
+.reverse-highlight {
+  --highlight-clr: hotpink;
+  --accent-clr: hsla(240, 100%, 50%, 0.541);
+}
 
-  .svg {
-    height:"500";
-    width:"100%";
-  }
+.std {
+  background: black;
+  stroke: var(--highlight-clr);
+  color: var(--highlight-clr);
+  font-family: "Audiowide", sans-serif;
+  box-shadow: var(--accent-clr);
+  text-shadow: 2px 2px 4px var(--accent-clr);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 10px;
+  margin: 10px;
+  border: 10px;
+  stroke-width: 2px;
+}
 
- #svg .hole-text {
-    font-family: "Audiowide", monospace;
-    font-size: 16px;
-    stroke: hotpink;
-    fill: hotpink;
-  }
-
-  #svg .hole-point {
-    stroke: blue;
-    stroke-width: 2px;
-  }
-
-  #svg .hole-circle {
-    stroke: white;
-    stroke-width: 2px;
-  }
-
-  #svg .tick {
-    stroke-width: 2px;
-    stroke: hotpink;
-  }
-
-  #svg .axis {
-    stroke: white;
-    stroke-width: 2px;
-  }
-
-  .content-bx {
-    border: 5px solid hotpink;
-    padding: 10px;
-    margin: 2px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: flex-end;
-  }
+.content-bx {
+  border: 5px solid var(--highlight-clr);
+  box-shadow: 0 0 10px 2px var(--accent-clr);
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-end;
+}
 
 input {
-    border: 1px solid hotpink;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: blue;
-    background-color: tan;
-    width: 100px;
-    text-align:right;
-    margin-bottom: 15px; 
-    font-family: "Audiowide", sans-serif;
-  }
-  
+  background-color: black;
+  width: 100px;
+  text-align: right;
+}
+
 label {
-    margin: 0 5px;
-    color:blue;
-    font-family: "Audiowide", sans-serif;
-  }
-  
-button {
-    color: hotpink;
-    background-color: black;
-    border: 2px blue solid;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: "Audiowide", sans-serif;
-  } 
-  
+  margin: 0 5px;
+  color: var(--highlight-clr);
+}
+
+.border {
+  color: var(--highlight-clr);
+  /* background-color: black; */
+  border: 2px var(--highlight-clr) solid;
+  box-shadow: 0 0 10px 2px var(--accent-clr);
+  padding: 10px 20px;
+  margin: 15px 0 15px 0;
+  font-size: 16px;
+}
+
+.border:hover {
+  box-shadow: 0 0 10px 4px var(--accent-clr);
+}
+
+.svg {
+  height: "300";
+  width: "100%";
+}
+
+#svg .hole-text {
+  font-size: 12px;
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+#svg .hole-point {
+  stroke: blue;
+}
+
+#svg .hole-circle {
+  stroke: tan;
+}
+
+#svg .tick {
+  stroke: hotpink;
+}
+
+#svg .axis {
+  stroke: tan;
+}

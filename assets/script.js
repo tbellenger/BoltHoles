@@ -6,8 +6,8 @@ let tick = 0;
 
 var svg = d3.select("svg");
 // calculate extents and midpoint
-let canvY = 500;
-let canvX = 500;
+let canvY = 300;
+let canvX = 300;
 let canvMidX = canvX / 2;
 let canvMidY = canvY / 2;
 
