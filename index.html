@@ -5,30 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bolt Hole Calculator</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Audiowide"
-    />
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
   </head>
-  <body class="std highlight">
-    <h1 class="std highlight">Bolt Hole Calculator</h1>
-    <div class="std content-bx highlight">
-      <label class="highlight" for="Radius">Radius</label>
-      <input class="highlight border" type="number" id="r" name="r" value="3" />
-      <label for="Start Angle">Start Angle</label>
-      <input class="border" type="number" step="5" min="0" max="360" id="s" name="s" value="45" />
-      <label for="Number of holes">Number of Holes</label>
-      <input class="border" type="number" min="3" max="40" id="h" name="h" value="4" />
-      <button class="std highlight border" id="graph">Calculate</button>
-    </div>
+  <body>
+    <h1>Bolt Hole Calculator</h1>
+    <div class="row">
+      <div class="col input-section">
+        <label for="Radius">Radius</label>
+        <input type="number" id="r" name="r" value="3" />
+        <label for="Start Angle">Start Angle</label>
+        <input
+          type="number"
+          step="5"
+          min="0"
+          max="360"
+          id="s"
+          name="s"
+          value="45"
+        />
+        <label for="Number of holes">Number of Holes</label>
+        <input type="number" min="3" max="40" id="h" name="h" value="4" />
+        <button id="graph">Calculate</button>
+      </div>
 
-    <div class="std content-bx highlight">
-      <svg 
-        id="svg"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 300 300"
-      ></svg>
+      <div class="col display-section">
+        <svg
+          id="svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 300 300"
+        ></svg>
+      </div>
     </div>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="./assets/script.js"></script>

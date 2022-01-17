@@ -1,87 +1,86 @@
-.highlight {
-  --highlight-clr: blue;
-  --accent-clr: hsla(330, 100%, 71%, 0.699);
+* {
+  box-sizing: border-box;
 }
 
-.reverse-highlight {
-  --highlight-clr: hotpink;
-  --accent-clr: hsla(240, 100%, 50%, 0.541);
+h1 {
+  text-align: center;
 }
 
-.std {
-  background: black;
-  stroke: var(--highlight-clr);
-  color: var(--highlight-clr);
-  font-family: "Audiowide", sans-serif;
-  box-shadow: var(--accent-clr);
-  text-shadow: 2px 2px 4px var(--accent-clr);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  padding: 10px;
-  margin: 10px;
-  border: 10px;
-  stroke-width: 2px;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #325288;
 }
 
-.content-bx {
-  border: 5px solid var(--highlight-clr);
-  box-shadow: 0 0 10px 2px var(--accent-clr);
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: flex-end;
+input,
+label,
+button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #325288;
+  margin: 0.25em;
+  border-radius: 0.15em;
 }
 
 input {
-  background-color: black;
-  width: 100px;
+  border: 0.1em solid #325288;
+  padding: 0.5em;
+  width: 20%;
+  /* align input text to the right */
   text-align: right;
 }
 
-label {
-  margin: 0 5px;
-  color: var(--highlight-clr);
+button {
+  background-color: #325288;
+  color: #faeee7;
+  border: none;
+  padding: 0.5em;
+  cursor: pointer;
 }
 
-.border {
-  color: var(--highlight-clr);
-  /* background-color: black; */
-  border: 2px var(--highlight-clr) solid;
-  box-shadow: 0 0 10px 2px var(--accent-clr);
-  padding: 10px 20px;
-  margin: 15px 0 15px 0;
-  font-size: 16px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
-.border:hover {
-  box-shadow: 0 0 10px 4px var(--accent-clr);
+.col {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0.25em;
 }
 
-.svg {
-  height: "300";
-  width: "100%";
+.input-section {
+  flex: 1 1 25%;
 }
 
-#svg .hole-text {
-  font-size: 12px;
-  font-family: "Arial", "Helvetica", sans-serif;
+.display-section {
+  flex: 1 1 74%;
+  /* set max height to viewport height */
+  max-height: calc(100vh * 0.5);
 }
 
-#svg .hole-point {
-  stroke: blue;
+.axis,
+circle,
+.hole-point,
+.hole-text,
+.tick {
+  stroke: #325288;
+  color: #325288;
+  font-size: 0.5rem;
+  /* change font to computer style */
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
 }
 
-#svg .hole-circle {
-  stroke: tan;
+.hole-point {
+  stroke: #d96098;
 }
 
-#svg .tick {
-  stroke: hotpink;
-}
-
-#svg .axis {
-  stroke: tan;
+.tick {
+  stroke: #24a19c;
 }
