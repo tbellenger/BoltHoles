@@ -94,7 +94,7 @@ function drawPoint(item, index) {
   // calculate moving the text toward the center
   // so it does not go outside the canvas. More
   // movement towards center as it gets closer to the edge
-  let xAdjust = -28 + (circX / canvX - 0.5) * -20;
+  let xAdjust = -48 + (circX / canvX - 0.5) * -43;
 
   svg
     .append("circle")
