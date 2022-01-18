@@ -10,7 +10,6 @@ var urlsToCache = [
   "./assets/images/favicon-16x16.png",
   "./assets/images/favicon-32x32.png",
   "./assets/images/favicon.ico",
-  "https://d3js.org/d3.v4.min.js",
 ];
 
 self.addEventListener("install", function (event) {
