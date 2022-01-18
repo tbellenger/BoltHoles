@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- add meta color  -->
+    <meta name="theme-color" content="#2196F3" />
     <meta charset="UTF-8" />
+    <!-- add meta description -->
+    <meta
+      name="description"
+      content="An app to calculate bolt hole coordinates on a milling machine"
+    />
+    <!-- add apple itouch icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/apple-touch-icon.png"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bolt Hole Calculator</title>
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    <!-- add manifest -->
+    <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
     <h1>Bolt Hole Calculator</h1>
     <div class="row">
       <div class="col input-section">
-        <label for="Radius">Radius</label>
+        <label for="r">Radius</label>
         <input type="number" id="r" name="r" value="3" />
-        <label for="Start Angle">Start Angle</label>
+        <label for="s">Start Angle</label>
         <input
           type="number"
           step="5"
@@ -23,7 +38,7 @@
           name="s"
           value="45"
         />
-        <label for="Number of holes">Number of Holes</label>
+        <label for="h">Number of Holes</label>
         <input type="number" min="3" max="40" id="h" name="h" value="4" />
         <button id="graph">Calculate</button>
       </div>
@@ -38,5 +53,24 @@
     </div>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="./assets/script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/sw.js").then(
+            function (registration) {
+              // Registration was successful
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            function (err) {
+              // registration failed :(
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      }
+    </script>
   </body>
 </html>
