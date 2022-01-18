@@ -1,6 +1,6 @@
 var CACHE_NAME = "boltholes-cache-v1";
 var urlsToCache = [
-  "/",
+  "./",
   "./index.html",
   "./assets/style.css",
   "./assets/script.js",
