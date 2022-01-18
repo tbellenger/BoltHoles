@@ -21,6 +21,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
     <!-- add manifest -->
     <link rel="manifest" href="./manifest.json" />
+    <!-- add favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
   </head>
   <body>
     <h1>Bolt Hole Calculator</h1>
@@ -56,7 +58,7 @@
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
-          navigator.serviceWorker.register("/sw.js").then(
+          navigator.serviceWorker.register("./sw.js").then(
             function (registration) {
               // Registration was successful
               console.log(
