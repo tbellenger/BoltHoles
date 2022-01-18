@@ -1,7 +1,7 @@
 {
     "short_name": "Bolt Holes",
     "name": "Bolt Hole Calculator",
-    "start_url": "/BoltHoles",
+    "start_url": "/BoltHoles/",
     "background_color": "#3367D6",
     "display": "standalone",
     "theme_color": "#3367D6",
