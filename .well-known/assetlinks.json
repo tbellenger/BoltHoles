@@ -1,6 +1,7 @@
 [{
         "relation": ["delegate_permission/common.handle_all_urls"],
         "target" : { "namespace": "android_app", "package_name": "io.github.tbellenger.twa",
-                     "sha256_cert_fingerprints": ["FF:CF:91:83:B2:5A:03:4D:3A:91:0E:2C:4C:0D:FD:26:6D:DB:24:DE:4D:05:C2:16:A1:ED:C4:91:C3:EC:5A:55"] }
+                     "sha256_cert_fingerprints": ["FF:CF:91:83:B2:5A:03:4D:3A:91:0E:2C:4C:0D:FD:26:6D:DB:24:DE:4D:05:C2:16:A1:ED:C4:91:C3:EC:5A:55",
+                        "7C:CF:21:FE:54:DC:A9:C1:62:8D:B6:B9:4A:A2:ED:44:E6:24:B0:35:18:D0:2A:A9:08:CD:0A:B3:4C:26:A0:49"] }
       }
 ]
